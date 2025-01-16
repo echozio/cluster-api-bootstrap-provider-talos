@@ -40,7 +40,9 @@ const HostnameSourceInfrastructureName HostnameSource = "InfrastructureName"
 type HostnameSpec struct {
 	// Source of the hostname.
 	//
-	// Allowed values: "MachineName" (use linked Machine's Name).
+	// Allowed values:
+	// "MachineName" (use linked Machine's Name).
+	// "InfrastructureName" (use linked Machine's infrastructure's name).
 	Source HostnameSource `json:"source,omitempty"`
 }
 
