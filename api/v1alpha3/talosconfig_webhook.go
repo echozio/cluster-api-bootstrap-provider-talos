@@ -57,7 +57,7 @@ func (r *TalosConfig) validate() error {
 	default:
 		allErrs = append(allErrs,
 			field.Invalid(field.NewPath("spec").Child("hostname").Child("source"), r.Spec.Hostname.Source,
-				fmt.Sprintf("valid values are: %q", []HostnameSource{HostnameSourceMachineName}),
+				fmt.Sprintf("valid values are: %q", []HostnameSource{HostnameSourceMachineName, HostnameSourceInfrastructureName}),
 			),
 		)
 	}
